@@ -1,0 +1,68 @@
+{
+  "model": "hybrid_lgbm_gru",
+  "disclaimer": "Synthetic data \u2014 preliminary comparison only.",
+  "fusion_method": "logistic_stacking_with_isotonic_calibration",
+  "meta_features": [
+    "lgbm_prob",
+    "gru_prob"
+  ],
+  "threshold_selection": {
+    "metric": "validation_f1",
+    "selected_threshold": 0.1,
+    "selected_validation_f1": 0.6667
+  },
+  "val": {
+    "threshold": 0.1,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6666666666666666,
+    "pr_auc": 0.5,
+    "roc_auc": 0.9992907801418439,
+    "false_positive_rate": 0.0014184397163120547,
+    "false_negative_rate": 0.0,
+    "confusion_matrix": {
+      "tn": 704,
+      "fp": 1,
+      "fn": 0,
+      "tp": 1
+    },
+    "support": {
+      "n": 706,
+      "positives": 1,
+      "negatives": 705
+    }
+  },
+  "test": {
+    "threshold": 0.1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "pr_auc": 0.00547645125958379,
+    "roc_auc": 0.4972466960352423,
+    "false_positive_rate": 0.00440528634361233,
+    "false_negative_rate": 0.9999999999997999,
+    "confusion_matrix": {
+      "tn": 904,
+      "fp": 4,
+      "fn": 5,
+      "tp": 0
+    },
+    "support": {
+      "n": 913,
+      "positives": 5,
+      "negatives": 908
+    },
+    "inference_latency_ms": {
+      "mean": 0.0011820372391753776,
+      "p50": 0.0011820372391753776,
+      "p95": 0.0011820372391753776
+    }
+  },
+  "meta_learner_coef": [
+    [
+      19.303892378506486,
+      -1.8339267960478778
+    ]
+  ],
+  "primary_metric": "pr_auc"
+}

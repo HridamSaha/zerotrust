@@ -1,0 +1,8 @@
+{
+  "phase": 4,
+  "status": "complete",
+  "raw_dir": "C:\\Users\\ASUS\\zerotrust\\ml\\data\\raw",
+  "processed_dir": "C:\\Users\\ASUS\\zerotrust\\ml\\data\\processed",
+  "artifacts_dir": "C:\\Users\\ASUS\\zerotrust\\ml\\artifacts\\baseline",
+  "disclaimer": "Synthetic data for demonstration/preliminary experiments only. Not real-world validation."
+}

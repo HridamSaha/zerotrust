@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: zerotrust-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: zerotrust
+      POSTGRES_PASSWORD: zerotrust_dev_password
+      POSTGRES_DB: zerotrust
+    ports:
+      # Host 5433 avoids conflict with other local Postgres containers on 5432
+      - "5433:5432"
+    volumes:
+      - zerotrust_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U zerotrust -d zerotrust"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  zerotrust_pgdata:

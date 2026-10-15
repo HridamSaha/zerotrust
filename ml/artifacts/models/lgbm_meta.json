@@ -1,0 +1,24 @@
+{
+  "threshold": 0.1,
+  "best_iteration": 143,
+  "features": [
+    "failed_login_count",
+    "requests_per_minute",
+    "resource_sensitivity_mean",
+    "resource_sensitivity_max",
+    "device_trusted",
+    "minutes_since_auth",
+    "access_frequency",
+    "unusual_context",
+    "session_duration_minutes",
+    "distinct_resources",
+    "behavioral_deviation",
+    "hour_of_day",
+    "is_off_hours",
+    "failed_auth_ratio",
+    "sensitive_access_ratio",
+    "event_burst_score",
+    "event_index"
+  ],
+  "scale_pos_weight": 211.871
+}

@@ -1,0 +1,136 @@
+{
+  "model": "rule_based_baseline",
+  "disclaimer": "Synthetic data \u2014 preliminary comparison only; not real-world validation.",
+  "rules": [
+    {
+      "name": "R1_failed_logins",
+      "description": "failed_login_count >= 3",
+      "weight": 0.2
+    },
+    {
+      "name": "R2_request_rate",
+      "description": "requests_per_minute >= 12",
+      "weight": 0.15
+    },
+    {
+      "name": "R3_untrusted_device",
+      "description": "device_trusted == 0",
+      "weight": 0.15
+    },
+    {
+      "name": "R4_unusual_context",
+      "description": "unusual_context == 1",
+      "weight": 0.15
+    },
+    {
+      "name": "R5_sensitive_ratio",
+      "description": "sensitive_access_ratio >= 0.40",
+      "weight": 0.15
+    },
+    {
+      "name": "R6_behavioral_deviation",
+      "description": "behavioral_deviation >= 2.0",
+      "weight": 0.1
+    },
+    {
+      "name": "R7_off_hours_context",
+      "description": "is_off_hours == 1 AND unusual_context == 1",
+      "weight": 0.1
+    }
+  ],
+  "threshold_selection": {
+    "metric": "validation_f1",
+    "candidates": [
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5
+    ],
+    "selected_threshold": 0.5,
+    "selected_validation_f1": 0.2603550295857988,
+    "seed": 42
+  },
+  "train": {
+    "threshold": 0.5,
+    "precision": 0.1341991341991342,
+    "recall": 1.0,
+    "f1": 0.2366412213740458,
+    "pr_auc": 0.3144015784066886,
+    "roc_auc": 0.9920951043181014,
+    "false_positive_rate": 0.03045066991473812,
+    "false_negative_rate": 0.0,
+    "confusion_matrix": {
+      "tn": 6368,
+      "fp": 200,
+      "fn": 0,
+      "tp": 31
+    },
+    "support": {
+      "n": 6599,
+      "positives": 31,
+      "negatives": 6568
+    },
+    "inference_latency_ms": {
+      "mean": 0.06767569328692001,
+      "p50": 0.06767569328692,
+      "p95": 0.06767569328692
+    }
+  },
+  "val": {
+    "threshold": 0.5,
+    "precision": 0.14965986394557823,
+    "recall": 1.0,
+    "f1": 0.2603550295857988,
+    "pr_auc": 0.4669526901669759,
+    "roc_auc": 0.9849190390517515,
+    "false_positive_rate": 0.07275902211874269,
+    "false_negative_rate": 0.0,
+    "confusion_matrix": {
+      "tn": 1593,
+      "fp": 125,
+      "fn": 0,
+      "tp": 22
+    },
+    "support": {
+      "n": 1740,
+      "positives": 22,
+      "negatives": 1718
+    },
+    "inference_latency_ms": {
+      "mean": 0.06907873563177001,
+      "p50": 0.06907873563177,
+      "p95": 0.06907873563177
+    }
+  },
+  "test": {
+    "threshold": 0.5,
+    "precision": 0.11267605633802817,
+    "recall": 0.8,
+    "f1": 0.19753086419753085,
+    "pr_auc": 0.10967310571374583,
+    "roc_auc": 0.979448742746615,
+    "false_positive_rate": 0.030464216634429386,
+    "false_negative_rate": 0.19999999999998,
+    "confusion_matrix": {
+      "tn": 2005,
+      "fp": 63,
+      "fn": 2,
+      "tp": 8
+    },
+    "support": {
+      "n": 2078,
+      "positives": 10,
+      "negatives": 2068
+    },
+    "inference_latency_ms": {
+      "mean": 0.056984263714967225,
+      "p50": 0.056984263714967204,
+      "p95": 0.056984263714967204
+    }
+  },
+  "primary_metric": "pr_auc",
+  "success_criterion_note": "Primary metric is PR-AUC on the held-out test set. No claim of beating published literature on other datasets."
+}

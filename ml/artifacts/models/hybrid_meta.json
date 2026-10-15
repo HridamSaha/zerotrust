@@ -1,0 +1,7 @@
+{
+  "threshold": 0.1,
+  "meta_features": [
+    "lgbm_prob",
+    "gru_prob"
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "model": "lightgbm",
+  "disclaimer": "Synthetic data \u2014 preliminary comparison only.",
+  "n_features": 17,
+  "features": [
+    "failed_login_count",
+    "requests_per_minute",
+    "resource_sensitivity_mean",
+    "resource_sensitivity_max",
+    "device_trusted",
+    "minutes_since_auth",
+    "access_frequency",
+    "unusual_context",
+    "session_duration_minutes",
+    "distinct_resources",
+    "behavioral_deviation",
+    "hour_of_day",
+    "is_off_hours",
+    "failed_auth_ratio",
+    "sensitive_access_ratio",
+    "event_burst_score",
+    "event_index"
+  ],
+  "best_iteration": 143,
+  "scale_pos_weight": 211.871,
+  "training_time_seconds": 1.09,
+  "threshold_selection": {
+    "metric": "validation_f1",
+    "selected_threshold": 0.1,
+    "selected_validation_f1": 0.6415
+  },
+  "train": {
+    "threshold": 0.1,
+    "precision": 0.96875,
+    "recall": 1.0,
+    "f1": 0.9841269841269841,
+    "pr_auc": 0.9999999999999999,
+    "roc_auc": 1.0,
+    "false_positive_rate": 0.0001522533495736906,
+    "false_negative_rate": 0.0,
+    "confusion_matrix": {
+      "tn": 6567,
+      "fp": 1,
+      "fn": 0,
+      "tp": 31
+    },
+    "support": {
+      "n": 6599,
+      "positives": 31,
+      "negatives": 6568
+    }
+  },
+  "val": {
+    "threshold": 0.1,
+    "precision": 0.5483870967741935,
+    "recall": 0.7727272727272727,
+    "f1": 0.6415094339622641,
+    "pr_auc": 0.6341341717343142,
+    "roc_auc": 0.9867710868875014,
+    "false_positive_rate": 0.008149010477299181,
+    "false_negative_rate": 0.22727272727271697,
+    "confusion_matrix": {
+      "tn": 1704,
+      "fp": 14,
+      "fn": 5,
+      "tp": 17
+    },
+    "support": {
+      "n": 1740,
+      "positives": 22,
+      "negatives": 1718
+    }
+  },
+  "test": {
+    "threshold": 0.1,
+    "precision": 0.18518518518518517,
+    "recall": 0.5,
+    "f1": 0.2702702702702703,
+    "pr_auc": 0.23468738229205335,
+    "roc_auc": 0.8802224371373308,
+    "false_positive_rate": 0.01063829787234042,
+    "false_negative_rate": 0.49999999999995,
+    "confusion_matrix": {
+      "tn": 2046,
+      "fp": 22,
+      "fn": 5,
+      "tp": 5
+    },
+    "support": {
+      "n": 2078,
+      "positives": 10,
+      "negatives": 2068
+    },
+    "inference_latency_ms": {
+      "mean": 0.004200529355133846,
+      "p50": 0.0042005293551338465,
+      "p95": 0.0042005293551338465
+    }
+  },
+  "primary_metric": "pr_auc"
+}

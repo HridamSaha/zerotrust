@@ -1,0 +1,33 @@
+{
+  "phase": 5,
+  "disclaimer": "Synthetic data \u2014 preliminary comparison only.",
+  "primary_metric": "pr_auc",
+  "test_comparison": {
+    "rule_baseline": {
+      "pr_auc": 0.10967310571374583,
+      "f1": 0.19753086419753085,
+      "recall": 0.8,
+      "precision": 0.11267605633802817,
+      "roc_auc": 0.979448742746615,
+      "fpr": 0.030464216634429386
+    },
+    "lightgbm": {
+      "pr_auc": 0.23468738229205335,
+      "f1": 0.2702702702702703,
+      "recall": 0.5,
+      "precision": 0.18518518518518517,
+      "roc_auc": 0.8802224371373308,
+      "fpr": 0.01063829787234042,
+      "inference_latency_ms_mean": 0.004200529355133846
+    },
+    "gru": {
+      "pr_auc": 0.43274930312319326,
+      "f1": 0.23529411764705882,
+      "recall": 0.8,
+      "precision": 0.13793103448275862,
+      "roc_auc": 0.973421926910299,
+      "fpr": 0.05537098560354368,
+      "inference_latency_ms_mean": 0.10795147864172633
+    }
+  }
+}

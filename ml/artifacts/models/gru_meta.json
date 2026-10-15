@@ -1,0 +1,36 @@
+{
+  "threshold": 0.7000000000000002,
+  "best_epoch": 3,
+  "architecture": {
+    "input_dim": 10,
+    "hidden_dim": 64,
+    "num_layers": 2,
+    "dropout": 0.3,
+    "seq_len": 16,
+    "seq_features": [
+      "failed_login_count",
+      "requests_per_minute",
+      "resource_sensitivity_mean",
+      "resource_sensitivity_max",
+      "device_trusted",
+      "unusual_context",
+      "behavioral_deviation",
+      "failed_auth_ratio",
+      "sensitive_access_ratio",
+      "event_burst_score"
+    ]
+  },
+  "seq_features": [
+    "failed_login_count",
+    "requests_per_minute",
+    "resource_sensitivity_mean",
+    "resource_sensitivity_max",
+    "device_trusted",
+    "unusual_context",
+    "behavioral_deviation",
+    "failed_auth_ratio",
+    "sensitive_access_ratio",
+    "event_burst_score"
+  ],
+  "seq_len": 16
+}
